@@ -782,7 +782,7 @@ checksum = "ca718471876992059f251e33aafc334346ada08042b7661dd1fe313a9bced557"
 
 [[package]]
 name = "uqview"
-version = "0.1.5"
+version = "0.1.6"
 dependencies = [
  "cxx",
  "cxx-qt",
@@ -797,7 +797,7 @@ dependencies = [
 
 [[package]]
 name = "uqview-core"
-version = "0.1.5"
+version = "0.1.6"
 dependencies = [
  "serde",
  "serde_json",
