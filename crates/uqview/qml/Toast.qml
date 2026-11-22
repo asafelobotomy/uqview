@@ -21,7 +21,7 @@ Rectangle {
 
     visible: opacity > 0
     opacity: 0
-    Behavior on opacity { NumberAnimation { duration: 150 } }
+    Behavior on opacity { NumberAnimation { duration: Theme.motionBase; easing.type: Theme.easing } }
     implicitWidth: row.implicitWidth + 28
     implicitHeight: 40
     radius: Theme.radius

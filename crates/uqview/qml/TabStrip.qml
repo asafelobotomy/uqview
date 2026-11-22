@@ -52,6 +52,7 @@ Rectangle {
                 height: list.height
                 radius: Theme.radius
                 color: isCurrent ? Theme.surface : (hover.hovered ? Theme.surfaceAlt : "transparent")
+                Behavior on color { ColorAnimation { duration: Theme.motionFast } }
                 border.color: isCurrent ? Theme.border : "transparent"
                 // Square off the bottom so the current tab runs into the bar under it.
                 Rectangle {

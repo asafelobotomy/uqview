@@ -38,4 +38,15 @@ QtObject {
     readonly property real smallSize: Math.max(7, bodySize - 1)
     readonly property int gap: 8
     readonly property int barHeight: 48
+
+    // Motion: the same speeds and curves as uQ's shell (uQ shell/core/Motion.qml), so the
+    // app's hovers, fades and slides move like the desktop's. Use these, not literal ms.
+    // Hover, press and focus feedback; things going away.
+    readonly property int motionFast: 100
+    // Moves, slides, toasts and things coming in.
+    readonly property int motionBase: 140
+    // Large surfaces: a whole page or panel.
+    readonly property int motionSlow: 220
+    // Arriving or moving things start quick and settle.
+    readonly property int easing: Easing.OutCubic
 }
