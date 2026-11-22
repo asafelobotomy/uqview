@@ -55,7 +55,7 @@ Rectangle {
                 asynchronous: true
                 autoTransform: true
                 opacity: cell.isCurrent ? 1 : (hover.hovered ? 0.95 : 0.7)
-                Behavior on opacity { NumberAnimation { duration: 100 } }
+                Behavior on opacity { NumberAnimation { duration: Theme.motionFast; easing.type: Theme.easing } }
             }
             HoverHandler { id: hover; cursorShape: Qt.PointingHandCursor }
             TapHandler { onTapped: strip.picked(cell.index) }

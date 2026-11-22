@@ -140,7 +140,7 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         y: app.chrome ? 0 : -height
-        Behavior on y { NumberAnimation { duration: 120 } }
+        Behavior on y { NumberAnimation { duration: Theme.motionBase; easing.type: Theme.easing } }
         height: Theme.barHeight
         color: Theme.surface
         visible: !app.marking
@@ -295,7 +295,7 @@ Item {
                     radius: 20
                     color: Theme.overlay
                     opacity: zone.hovered ? 0.92 : 0
-                    Behavior on opacity { NumberAnimation { duration: 120 } }
+                    Behavior on opacity { NumberAnimation { duration: Theme.motionBase; easing.type: Theme.easing } }
                     QQC2.Label {
                         anchors.centerIn: parent
                         text: parent.parent.modelData < 0 ? "‹" : "›"
@@ -353,7 +353,7 @@ Item {
         anchors.left: parent.left
         anchors.right: infoPanel.visible ? infoPanel.left : parent.right
         y: app.chrome ? app.height - height : app.height
-        Behavior on y { NumberAnimation { duration: 120 } }
+        Behavior on y { NumberAnimation { duration: Theme.motionBase; easing.type: Theme.easing } }
         height: implicitHeight
         visible: app.cfg.show_thumbnails !== false && app.files.length > 1 && !app.marking
         files: app.files
