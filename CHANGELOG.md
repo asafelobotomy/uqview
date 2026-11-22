@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5 — 2026-11-22
+
+- **uQview's problems show in uQ.** uQview uses uQ's shared uq-diag module (`crates/uqview/src/uq_diag.rs`, uq-diag 1.0.1): a panic leaves a crash record that uQ 0.3.35 lists on Settings › Problems with a report to copy, and a window that can't open logs `UQVIEW-001` in uQ's format, explained by `uqctl explain` and the Problems page from `/usr/share/uq/diag/uqview.toml`. CI checks the vendored copy and that the codes and the list agree.
+
 ## 0.1.4 — 2026-11-22
 
 - **Moves like the desktop.** Hover and press colours fade in 100 ms instead of snapping, and fades, slides and toasts use uQ's shell speeds (100, 140 and 220 ms) with an ease-out curve instead of a mix of 70 to 250 ms and linear easing. The speeds are `Theme.motionFast`, `motionBase`, `motionSlow` and `Theme.easing`, matching uQ's `shell/core/Motion.qml`.

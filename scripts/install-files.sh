@@ -13,4 +13,6 @@ install -Dm644 "$here/packaging/desktop/io.github.asafelobotomy.uqview.metainfo.
 install -Dm644 "$here/packaging/desktop/uqview.svg" "$d/usr/share/icons/hicolor/scalable/apps/uqview.svg"
 install -Dm644 -t "$d/usr/share/uq/settings/pages/uqview/" "$here"/uq/pages/uqview/*.qml \
     "$here/uq/pages/uqview/logic.js" "$here/uq/pages/uqview/page.toml"
+# uqview's problem codes, for uqctl explain and uQ Settings' Problems page.
+install -Dm644 "$here/uq/diag/uqview.toml" "$d/usr/share/uq/diag/uqview.toml"
 install -Dm644 "$here/LICENSE" "$d/usr/share/licenses/uqview/LICENSE"

@@ -15,9 +15,14 @@ mod backend;
 mod theme;
 #[allow(dead_code)] // vendored whole; this app uses part of it
 #[rustfmt::skip]
+mod uq_diag;
+#[allow(dead_code)] // vendored whole; this app uses part of it
+#[rustfmt::skip]
 mod uq_theme;
 
 fn main() {
+    // uQ's log format and a crash record on a panic (uQ's native/uq-diag).
+    uq_diag::init("uqview", "warn");
     // `--new-window`: skip handing the pictures to an open uQview.
     let mut new_window = false;
     let argv: Vec<String> = std::env::args()
@@ -152,7 +157,7 @@ fn window(forward: Option<String>) {
         engine.load(&QUrl::from("qrc:/qt/qml/org/uqview/app/qml/Main.qml"));
     }
     if !app::ffi::uqview_has_window() {
-        eprintln!("uqview: the window couldn't be created (is Qt Quick installed?)");
+        tracing::error!("[UQVIEW-001] the window couldn't be created (is Qt Quick installed?)");
         std::process::exit(4);
     }
     if let Some(app) = app.as_mut() {

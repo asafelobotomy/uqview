@@ -1,0 +1,11 @@
+# uQview's problem codes for uQ (`uqctl log`, `uqctl explain`, Settings › Problems). Installed as
+# /usr/share/uq/diag/uqview.toml. A code never changes meaning: set `retired = true` on one nothing
+# logs any more, and give a new problem the next number.
+app = "uQview"
+
+[[code]]
+id = "UQVIEW-001"
+severity = "error"
+title = "uQview's window couldn't open"
+means = "uQview started but couldn't make its window, usually because part of Qt Quick (the toolkit its window is built with) is missing or broken."
+fix = "Reinstall it with: sudo pacman -S qt6-declarative qt6-svg, then open the picture again."
