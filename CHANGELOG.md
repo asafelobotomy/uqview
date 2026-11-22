@@ -2,7 +2,7 @@
 
 ## 0.1.5 — 2026-11-22
 
-- **uQview's problems show in uQ.** uQview uses uQ's shared uq-diag module (`crates/uqview/src/uq_diag.rs`, uq-diag 1.0.0): a panic leaves a crash record that uQ 0.3.35 lists on Settings › Problems with a report to copy, and a window that can't open logs `UQVIEW-001` in uQ's format, explained by `uqctl explain` and the Problems page from `/usr/share/uq/diag/uqview.toml`. CI checks the vendored copy and that the codes and the list agree.
+- **uQview's problems show in uQ.** uQview uses uQ's shared uq-diag module (`crates/uqview/src/uq_diag.rs`, uq-diag 1.0.1): a panic leaves a crash record that uQ 0.3.35 lists on Settings › Problems with a report to copy, and a window that can't open logs `UQVIEW-001` in uQ's format, explained by `uqctl explain` and the Problems page from `/usr/share/uq/diag/uqview.toml`. CI checks the vendored copy and that the codes and the list agree.
 
 ## 0.1.4 — 2026-11-22
 
