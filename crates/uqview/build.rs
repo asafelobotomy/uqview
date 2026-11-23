@@ -15,7 +15,10 @@ fn main() {
         "qml/logic.js",
     ];
     let mut module = QmlModule::new("org.uqview.app").qml_files(files.map(QmlFile::from));
-    module = module.qml_files([QmlFile::from("Theme.qml").singleton(true), QmlFile::from("UqThemeBase.qml")]);
+    module = module.qml_files([
+        QmlFile::from("Theme.qml").singleton(true),
+        QmlFile::from("UqThemeBase.qml"),
+    ]);
     CxxQtBuilder::new_qml_module(module)
         .qt_module("Gui")
         .qt_module("Quick")
