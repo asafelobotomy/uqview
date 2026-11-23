@@ -27,7 +27,7 @@ QQC2.AbstractButton {
     QQC2.ToolTip.text: shortcut !== "" ? tip + "  (" + shortcut + ")" : tip
 
     background: Rectangle {
-        radius: Math.max(4, Theme.radius - 2)
+        radius: Math.max(4, Theme.radiusControl)
         color: b.primary || b.checked ? (b.hovered ? Qt.lighter(Theme.accent, 1.1) : Theme.accent)
              : (b.down ? Theme.overlay : (b.hovered ? Theme.surfaceAlt : "transparent"))
         Behavior on color { ColorAnimation { duration: Theme.motionFast } }

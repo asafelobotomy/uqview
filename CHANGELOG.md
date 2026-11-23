@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.6 — 2026-11-22
+
+- **uQview follows uQ's Reduce motion** and takes its look from uQ's shared theme base. `Theme.qml` is now `UqThemeBase` (vendored unchanged from uQ's `native/uq-consts`, uq-consts 1.0.0), with the desktop's own palette off uQ as before; inner corners use `radiusControl`.
+- uq-theme 1.1.0 (reads `tokens.json`'s `motion`). CI checks every vendored kit and the problem codes with one script, `scripts/check-uq-native.sh`, from `uq/native.toml`; it replaces `check-uq-theme.sh`, `check-uq-diag.sh` and `check-diag-codes.sh`.
+
 ## 0.1.5 — 2026-11-22
 
 - **uQview's problems show in uQ.** uQview uses uQ's shared uq-diag module (`crates/uqview/src/uq_diag.rs`, uq-diag 1.0.1): a panic leaves a crash record that uQ 0.3.35 lists on Settings › Problems with a report to copy, and a window that can't open logs `UQVIEW-001` in uQ's format, explained by `uqctl explain` and the Problems page from `/usr/share/uq/diag/uqview.toml`. CI checks the vendored copy and that the codes and the list agree.

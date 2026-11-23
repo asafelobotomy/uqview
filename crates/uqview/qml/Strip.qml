@@ -40,7 +40,7 @@ Rectangle {
             readonly property bool isCurrent: index === strip.current
             width: 80
             height: list.height
-            radius: Math.max(3, Theme.radius - 4)
+            radius: Math.max(3, Theme.radiusInner)
             color: Theme.surfaceAlt
             border.width: isCurrent ? 2 : 0
             border.color: Theme.accent
